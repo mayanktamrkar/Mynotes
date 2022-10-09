@@ -1,0 +1,21 @@
+// add two elelment  and find zero 
+
+let arr =[-5,-4,-3,-2,3,4,6]
+let l=0
+let r=arr.length-1
+while(l<r)
+	{
+		if(arr[l]+arr[r]==0)
+		{
+			console.log("yes")
+			break;
+		}
+		else if( arr[l]+arr[r]>0){
+			console.log("less")
+			r--
+		}else{
+			console.log("greater")
+			l++
+			
+		}
+	}

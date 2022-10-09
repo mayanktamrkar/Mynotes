@@ -1,0 +1,91 @@
+1 create database->  CREATE DATABASE databasename;
+show database---->SHOW DATABASE
+
+2. create table-->CREATE TABLE Persons
+(
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+);
+
+
+3. insert values in table-->    INSERT INTO Persons(PersoneID,LastName,FirstName,Address,City)
+                                VALUES('01','tamrkar','mayank','banganga','indore') 
+
+
+4 update values in table--->UPDATE Employee
+                                 SET email = 'jking@test. com'
+                          	 WHERE EmployeeID = 1;                               
+
+
+5 delete value in table--->	DELETE FROM Employee WHERE EmployeeID = 1;
+
+
+6 where condition opertor --->
+                             	SELECT * FROM Employee 
+                            	 WHERE Salary > 25000;
+
+7. IN opertor --> select multiple values  
+		  		SELECT * FROM Customers
+		   		 WHERE City IN ('Paris','London');
+
+8 LIKE---->search pattern in table
+	   			SELECT * FROM Customers
+	    			WHERE City LIKE 's%';
+9. BETWEEN ---> search from given this range
+				SELECT * FROM Products
+				WHERE Price BETWEEN 50 AND 60;
+
+10.GROUP BY-->  		SELECT DeptId FROM Employee
+				GROUP BY DeptId;
+
+11 ORDER BY----->		SELECT * FROM Employee
+ 				ORDER BY FirstName;
+
+12 LEFT JOIN --->join or dispaly full left table and join right table in left  
+				SELECT emp.empid, emp.FirstName, dept.DeptId, dept.Name 
+				FROM Employee emp 
+				LEFT JOIN Department dept
+				ON emp.DeptId = dept.DeptId;
+
+
+13 RIGHT JOIN --->join left table in right table .	
+				SELECT dept.DeptId, dept.Name, emp.empid, emp.FirstName  
+				FROM Employee emp 
+				RIGHT JOIN Department dept
+				ON emp.DeptId = dept.DeptId;
+
+14 MIN VALUES -->  find min values
+				SELECT MIN(Price) AS SmallestPrice
+				FROM Products;
+15 max values --> find max values 
+				SELECT MAX(Price) AS LargestPrice
+				FROM Products;
+
+16 count values--> it count the values 
+				SELECT COUNT(ProductID)           // count product id in products
+				FROM Products;
+
+17 avg values in table--->      SELECT AVG(Price)
+				FROM Products;
+
+
+18 sum of values in table-->
+ 				SELECT SUM(Quantity)
+				FROM OrderDetails;
+
+19 union ---> add two table in one table
+				SELECT City FROM Customers
+				UNION
+				SELECT City FROM Suppliers
+				ORDER BY City;
+
+				////example 2
+				SELECT City, Country FROM Customers
+				WHERE Country='Germany'
+				UNION
+				SELECT City, Country FROM Suppliers
+				WHERE Country='Germany'
+				ORDER BY City;

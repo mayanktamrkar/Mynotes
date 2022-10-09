@@ -1,0 +1,5 @@
+iife-immediate invoked expression it is also called as self invoked anyoumous function .it write in 
+     brakets and calls using groupig opertor.
+	ex---> (funciton(){document.write("welcome")}) ()  
+	ex---> (funciton(a,v){document.write(a+v)}) (20,30)   //with parameter
+---------------------------

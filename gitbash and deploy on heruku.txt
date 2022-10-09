@@ -1,0 +1,45 @@
+
+git bash
+git config --global user.name " " user.email "" 
+touch .gitignore ----> write here file name you dont push ex -> node.modules/
+
+1 git init --> create a empty  folder .git 
+2 git status -->check statu
+3 git add .  --> in folder add all files
+4 git add <m.txt>    add perticular file
+4 git commit -m "first commit"    add files in empty folder 
+
+6 git remote add origin " link of repo of github "
+if public then create ssh key  and paste in github 
+7 git push -u origin master/main 
+
+
+8 open herku terminal 
+9 create app 
+10 connect with repositery git 
+11 run 
+
+//create branch 
+git branch <branch_name>
+git checkout  <branch_name>  --> enter branch 
+git chechout master     enter in master branch
+git init
+git add.
+git commit -m "first" 
+git push origin <branch_name>
+
+//merge file in master 
+git merge <file_name>
+
+
+//pull data 
+create folder and open vs cli 
+git init 
+git pull <url of repo > 
+dot some changes 
+git branch <branchname>
+git checkout <branchname>
+git add .
+git commit -m "changes in file  "
+git push <url of repo>
+now you go github and merge file 

@@ -1,0 +1,54 @@
+// check arr1 element are square of second array2
+let arr1=[1,2,5,4]
+let arr2=[1,4,25,16]
+let obj ={}
+let obj2={}
+let flag=0
+for(key of arr1)
+{
+	if(obj[key]== undefined ){
+		obj[key]=1
+		
+	}else{
+		obj[key]++
+		
+	}
+	
+}
+console.log(obj)
+for(key of arr2)
+{
+	if(obj2[key]== undefined ){
+		obj2[key]=1
+		
+	}else{
+		obj2[key]++
+		
+	}
+	
+}
+console.log(obj2)
+for(key in obj){
+	if(!obj2[key*key]){
+		//console.log("no")
+			flag=0
+	}
+	else{
+		//console.log("yes")
+			flag=1
+	}
+	if(obj[key]==obj2[key*key])
+	{
+		//console.log("yes")
+		flag=1
+	}else{
+		//console.log("no")
+		flag=0
+	}
+}
+
+if(flag==1){
+	console.log("finally yes")
+}else{
+	console.log("finally no")
+}

@@ -1,0 +1,88 @@
+import React from 'react'
+import { useReducer } from 'react';
+//import { Comp2 } from './Comp2'
+
+const i=0;
+const reducer=(state,action)=>{
+  console.log(state,action.type)
+  if(action.type==="inc"){
+    return state+1
+  }
+  if(action.type==="dec"){
+    return state-1
+  }
+  return state;
+
+}
+export const Comp1 = () => {
+  const [state,disaptch]=useReducer(reducer,i)
+  
+  return (<>
+  <h1>this is component{state}</h1>
+  <button onClick={()=>disaptch({type:"inc"})}>Inc</button>
+  <button onClick={()=>{disaptch({type:"dec"})}}>Dec</button>
+   
+  </>
+ 
+  )
+}
+
+-----------------------------------------------------------------------
+/////multi states //////////////////////
+
+ if(action.type==="inc"){
+    return state+1
+  }
+  if(action.type==="dec"){
+    return state-1
+  }
+  if(action.type==="mul"){
+    return state*2
+  }
+  if(action.type==="sub"){
+    return state=0
+  }
+  return state;
+
+}
+export const Comp1 = () => {
+  const [state,disaptch]=useReducer(reducer,i)
+  
+  return (<>
+  <h1>this is component{state}</h1>
+  <button onClick={()=>disaptch({type:"inc"})}>Inc</button>
+  <button onClick={()=>{disaptch({type:"dec"})}}>Dec</button>
+  <button onClick={()=>{disaptch({type:"mul"})}}>mul</button>
+  <button onClick={()=>{disaptch({type:"sub"})}}>sub</button>
+-----------------------------------------------------------------------------
+///// using object//////////////////////
+
+const i={count:0};
+const reducer=(state,action)=>{
+  console.log(state,action.type)
+  if(action.type==="inc"){
+    return {count:state.count+1}
+  }
+  if(action.type==="dec"){
+    return {count:state.count+1}
+  }
+  if(action.type==="mul"){
+    return {count:state.count+1}
+  }
+  if(action.type==="sub"){
+    return {count:state.count+1}
+  }
+ 
+
+}
+export const Comp1 = () => {
+  const [state,disaptch]=useReducer(reducer,i)
+  
+  return (<>
+  <h1>this is component{state.count}</h1>
+  <button onClick={()=>disaptch({type:"inc"})}>Inc</button>
+  <button onClick={()=>{disaptch({type:"dec"})}}>Dec</button>
+  <button onClick={()=>{disaptch({type:"mul"})}}>mul</button>
+  <button onClick={()=>{disaptch({type:"sub"})}}>sub</button>
+
+----------------------------------------------------------------------------------

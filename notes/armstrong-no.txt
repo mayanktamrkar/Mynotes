@@ -1,0 +1,22 @@
+//armstrong no  0, 1, 153, 370, 371 and 407 .
+//Armstrong Number, also known as Narcissistic Number or a 
+//Plus Perfect Number of a given number base is a 
+//number that is the sum of its own digits
+// each raised to the power of the number of digits.
+let a=153//1+125+27=153
+let b=a
+let sum=0
+while(a>0){
+	let b =a%10 //3
+	sum=sum+b*b*b
+	a=Math.floor(a/10)
+	
+}
+if(sum==b){
+	console.log("yes")
+}else{
+	console.log("no")
+}
+
+console.log("a->",sum)
+

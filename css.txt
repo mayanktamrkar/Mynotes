@@ -1,0 +1,4 @@
+1 reload() --> for raload the page 
+2 preventDefault()-->for stop reloading page
+3. disabled --> for tag enable and disable
+

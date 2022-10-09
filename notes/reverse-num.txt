@@ -1,0 +1,13 @@
+//reverse int 
+let a=1253
+let b=0
+let sum=0
+ while(a>0){
+	b=a%10 // 3
+	sum=sum*10+b 
+	a=Math.floor(a/10) // 125
+
+}
+
+	
+console.log(sum)

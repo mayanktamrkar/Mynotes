@@ -1,0 +1,21 @@
+perform single acion in many form . one thing many form 
+
+it two types method overloading , method overridding ,
+
+method overrinding --
+we inherit the parent class and write same funtion in child class . and funtion already present in parent class . when we create 
+class child object it run only child function it not run parent funtion . because child function overridide .
+
+class A{
+
+ money(){
+  console.log("run1")
+}
+
+class B extents A{
+money(){
+console.olg("run2")
+}
+
+let x= new B();
+x.money() -------->run2 output

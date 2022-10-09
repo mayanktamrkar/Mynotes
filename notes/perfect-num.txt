@@ -1,0 +1,22 @@
+// perfect no .. that no which addition divisor  == number
+// 1+2+3=6 , 28=1+2+4+7+14   only two in 1 to 100 
+// 6,28,496,8128
+let num2=10000
+
+for(num1=1;num1<num2;num1++){
+  let b=0
+for(let i=1;i<num1;i++)
+	{
+		if(num1%i==0){
+			b+=i
+		} 
+	}
+if(num1==b)
+{
+console.log(num1,"yes")
+}
+
+
+
+	
+}

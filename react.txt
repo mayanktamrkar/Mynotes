@@ -1,0 +1,31 @@
+1 create folder 
+2 npx  create-react-app appname
+3 cd appname
+4 npm start 
+
+
+npm install react-bootstrap bootstrap @
+npm install @material-ui/core
+
+
+5 npx create-react-app appname --template redux { for redux dependecny } 
+
+6 npm axios { for data get /post }
+
+7img--> insert only src folder , import path in componet , src={path} 
+       and if img in body then you go index.css and define background-image:url{pathofimg}
+
+8 npm install react-bootstrap bootstrap , import bootstrap ,
+
+
+9 take input form input by e.target.value by using onchange() function 
+
+10.  npm install @mui/material @emotion/react @emotion/styled
+     import component and used
+
+
+11. npm install react-bootstrap-icons --save 
+    bootstrap icons 
+
+12  npm install react-hook-form
+   import useForm from 'react-hook-form'

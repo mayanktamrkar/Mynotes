@@ -1,0 +1,22 @@
+ /// palindrome no. check function
+
+var isPalindrome = function(x) {
+ 
+     let num=x;
+     let final=0
+    while(num>0){
+        let c=num%10
+        num= parseInt(num/10)
+        final=(final*10) +c
+        
+       
+    }
+
+   
+    if(final==x){
+        return true
+    }else{
+        return false
+    }
+    
+};

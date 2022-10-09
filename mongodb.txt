@@ -1,0 +1,90 @@
+
+
+1. create database--> use DATABASE_NAME
+
+
+2. show database-->show dbs
+3 delete database-->db.dropDatabase()
+4 create collection -->db.createCollection(student)
+5 show collection --> Show student
+6 delete collection--> db.student.drop()
+7 insert value in collection--> db.student.insert({name:"mayank"})
+8 find all values in  collection ---> db.student.find()
+9 find one vlaue is collection --> db.student.findOne({name:"mayank})
+10 update value in collection--> db.student.update({name"mayank},{$set:{name:"dev"}})
+11 remove values in documents--> db.student.remove({name:"dev"})
+
+12 and opertor-->db.student.find({$and: [{"sex" : "Female"}, {"class" : "VI"}]}   ////////in array 
+                       SELECT students FROM student
+			WHERE (sex='female') AND (class='VI')
+
+
+13 or=================>db.student.find({$or: [{"age": 20}, {"City": "London"}]})   ///////in array
+                       WHERE (age=20) OR (city="london)
+ 
+14 greater than ----> db.employee.find({ age : { $gt : 25 }})
+                         SELECT employees FROM Employee
+			 WHERE  (age>25) 
+
+15 greathan than equal to-->db.employee.find({ salary : { $gte : 20000 }})
+16 less than ------>db.employee.find({ salary : { $lt : 20000 }})
+17 less than equal to-->db.employee.find({ salary : { $lte : 20000 }})
+18 equal to ---------->db.employee.find({ gender : { $eq : Male }}).
+19 not equal to ------> db.employee.find({ gender : { $ne : Female }}).
+20 limit --------------->db.Students.find().limit(2)
+                        SELECT fistname
+			FROM Students
+			LIMIT 2 ;
+
+
+21 skip document ------->db.javatpoint.find().limit(1).skip(1)
+22 sort ----------------->db.student.find().sort({"Course":-1})  ///-1 desending order
+			SELECT * FROM student
+			ORDER BY Course DESC;
+
+
+23 regular expression --->db.books.find( { price: { $regex: /789$/ } } )  
+24 searching text -------> db.books.find( { $text: { $search: "Othelo" } } )  
+
+25 minimum values------->db.student.find({name: "Mohit"}, {$min: {salary: 2000}})
+			SELECT MIN(salary=2000)
+			FROM Students 
+			WHERE (name="mohit")
+                         
+ 
+
+26 maximum values------->db.contributor.find({name: "Mohit"}, {$max: {salary: 2000}})     /// WHERE(name=mohit) AND max(salary=2000)
+ 
+27 increment and decrement --->db.student.update({name: "Mohit"}, {$inc: {publisharticles: 10, salary: -100}})
+
+28 and or opertion --->db.student.find({
+           $and:[
+                {$or:[
+                     {"first_name" : "john"},        ///(firstname OR lastname) AND (phone )
+                     {"last_name" : "john"}          
+                    ]},
+                
+		   {"phone": "12345678"}
+            ]
+});
+
+29 . count the  documents -------------> db.student.count()
+                                         db.student.count({age:{$gt:18}})
+					SELECT COUNT(*)
+					FROM student
+
+30 average of------------------------------> db.employees.aggregate([ { $group: { _id: "$phone", total: { $avg: "$salary" } } } ])
+						SELECT AVG(salary) AS total
+						FROM employees
+						 WHERE (id=phoneno.);
+
+31 last values of query-------------------->db.employees.aggregate([ { $group: { _id: "$phone", total: { $last: "$salary" } } } ])
+32 sum of values -------------------------->db.employees.aggregate([ { $group: { _id: "$phone", total: { $sum: "$salary" } } } ])
+                                                SELECT SUM(salary) AS total
+						FROM employees
+						WHERE (id = 4);
+
+
+
+
+

@@ -1,0 +1,55 @@
+/////////////////////////////App.js/////////////////////
+import { createContext,useState } from 'react';
+import { Contest } from './Contest';
+
+
+const F= createContext()                    ---------> 1.create constext
+const  App=()=> {
+
+  const [data,setdata]=useState(1)
+
+    const may=()=>{ 
+        setdata(data+1)
+    }
+  
+
+  return (
+    <div className="App"> 
+        <F.Provider value={{may,data}}>              ----------->2.Provider pass data ,to component ,data multiple
+         <Contest   />
+       </F.Provider>
+       </div>
+  );
+}
+
+export default App;
+export { F} ;             
+-------------------------------------                              -------->3.export context 
+import React from 'react'
+//import { useState } from 'react'
+import { useContext } from 'react'
+// import { Comp2 } from './Comp2'
+import { F } from './App'
+export const Test = () => {
+  const {may,data}=useContext(F)
+    
+   
+
+
+    
+
+
+  return (
+    <div>
+    
+    <h1  className='text-center '  onClick={may}>click</h1>
+ 
+
+
+     <h1 className='text-center font-weight-bold  mt-10' >thats the data--{data}</h1>
+         
+    </div>
+  )
+}
+
+

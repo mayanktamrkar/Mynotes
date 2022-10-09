@@ -1,0 +1,28 @@
+// annagram problem is 
+// same length ,same no of character
+let str="mayank"
+let str2="kayanm"
+let obj={}
+if(str.length==str.length)
+{
+	for(key of str){
+		if(obj[key]== undefined )
+		{
+			obj[key]=1
+		}else{
+			obj[key]++
+		}
+	}
+	for(key of str2)
+		{
+			if(!obj[key]){
+				console.log("false")
+			}
+			else{
+				obj[key]--
+			}
+		}
+
+
+	
+}

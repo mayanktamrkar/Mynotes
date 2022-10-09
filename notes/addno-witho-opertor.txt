@@ -1,0 +1,11 @@
+// adding two no without using opertor
+let num1=10
+let num2=20
+
+for(let i=0;i<num2;i++)
+	{
+		num1++
+	}
+console.log(num1)
+
+

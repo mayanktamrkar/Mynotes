@@ -1,0 +1,56 @@
+////////////////////index.js////////
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+
+
+import App from './App';
+import { BrowserRouter  } from 'react-router-dom';                    ---->import 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+   <BrowserRouter>                                                    ---->cover App
+      
+    <App />
+   </BrowserRouter>
+
+
+);
+
+-------------------------------------------------
+////////////////////App.js/////////////////////////
+we define routes 
+
+
+     import { Routes,Route} from 'react-router-dom';
+ 
+
+ <Routes>
+             <Route path="/about" element ={ <Comp1/>} />
+              <Route path="/con" element ={ <Comp2/>} />
+              <Route path="/cal" element ={ <Cal/>} />
+              <Route path="/todo" element ={ <To/>} />
+              <Route path="/fetch" element ={ <Com/>} />
+              <Route path="/form" element ={ <Form/>} />
+      
+   </Routes>
+
+
+-------------------------------------------------------
+////////////////////Nav.jsx/////////////////////////
+using routes ---->
+
+import {Link} from ''
+
+
+       <div class="navbar-nav">
+          
+        <Link class="nav-link" to="/">Home </Link>
+        <Link class="nav-link" to="/con">component2</Link>
+        <Link class="nav-link" to="/about">Tic</Link>
+       
+        <Link class="nav-link" to="/cal">Calculator</Link>
+        <Link class="nav-link" to="/todo">Todo</Link>
+        <Link class="nav-link " to='/fetch'>Fetch</Link>
+        <Link class="nav-link " to='/form'>Form</Link>
+      </div>
+     

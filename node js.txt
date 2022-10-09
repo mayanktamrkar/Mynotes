@@ -1,0 +1,50 @@
+1 create folder
+2 cd folder
+3 npm init { for package.json }
+4 npm i express { for express }
+5 npm i -g nodemon { for nodemon dependency ,restart browser}
+6 npm i mongoose   {for mongodb}
+7 npm i ejs { for ejs template}
+
+  npm install body-parser
+  npm i bcryptjs --> for hashing password {bcrypt.hash ,bcrypt.compare}
+  npm i express-session --> app.use(session{}) 
+  
+  
+
+8 folder/app.js { create app.js file }
+9 change scripts in package.json 
+  "scripts": {"dev":"nodemon app"}
+
+10 add in below of licence 
+   "type":"module",  ------> to used import /export function 
+11 create controller/contorl.js  { for function }
+12 create models/model.js   { for model and schema }
+
+13 create roots/root.js    { for routing }
+14 create db/conection.js {for conection of express and mongdb }
+15 create view/index.js { for html pages }
+
+16 npm run dev {  for run server }
+
+17 app.use
+
+18 //for display body data send to database
+app.use(express.urlencoded({extended:false}))
+  
+    npm i cors [ for react to express connection ]
+  import cors form 'cors'
+19 app.use(cors()); ---> fecth apis 
+
+20 // import { join } from 'path'
+21 app.set("view engine","ejs");
+ 
+22//for json print on web
+app.use(express.json())
+
+23 app.use(bodyparser.json())
+
+24 //static files serving
+create public folder and create html css folder inside this 
+app.use(express.static(path.join(_dirname,"/public"));
+

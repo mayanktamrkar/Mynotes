@@ -1,0 +1,13 @@
+// add two elelment and finding target
+
+let arr =[1,2,3,5,4,6]
+for(let i=0;i<arr.length-2;i++)
+	{
+		for(j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]+arr[j]==9)
+				{
+					console.log("yes",arr[i],arr[j])
+				}
+			}
+	}
