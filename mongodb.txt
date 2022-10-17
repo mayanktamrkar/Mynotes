@@ -84,6 +84,17 @@
 						FROM employees
 						WHERE (id = 4);
 
+33 aggrete ---------------------> multistage pipline , we can perform multiple opertion . it also called chainig .
+			
+ 				 db.students.aggregate([
+                  		 {$match:{"name":"mayank"}},
+                  		 {$group:{"_id":"$_id", $total_marks:{"$add":["$maths" ,"$science"] } }}
+                 		  {"$sort":{"total_marks":1}}
+							])
+
+
+
+                                  db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : "$likes"}}}])
 
 
 

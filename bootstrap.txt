@@ -1,0 +1,29 @@
+bootstrap ---->
+  color --dark,info,primary,light,danger,warning,success
+
+button-->
+	<button class="btn btn-primary" type="button"></button>
+size---->
+	md,sm,xl,lg,xs
+	btn-sm,btn-large 
+container --it wrap in container
+container-fluid--max width
+
+grid class --> row ,col inside row  
+	12 column in conatiner so we use col-6 col-3 like
+	midium device ->col-md-10  , small device ->col-sm-6
+	
+margin --->
+	axis x,y---> my-4 ,mx-3,ml-2,mr-4,mb,mt
+display flex-->"d-flex justify-content-center align-itmes-center"    //for cener vertical and horizontal both
+
+img--->img-rounded,circle,thumbnail
+
+text-->text-lowercase,uppercase,capitalized
+table-->table-striped,table-responsive
+
+form--->form-group,form-control,form-inline
+
+
+
+https://hackerthemes.com/bootstrap-cheatsheet/

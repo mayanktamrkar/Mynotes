@@ -1,0 +1,22 @@
+flex-box -> with the display flex  container are horizonataly . 
+            justify-content:center;   horizontal center  x axix
+	   align-items:center;        vertically center  y axix  
+            flex-wrap:wrap;           resposiveness 
+
+-------------------------------------------------------------------------------
+grid --->
+     container-->   
+     display:grid ;
+     grid-template-columns : auto auto auto ;      // size of grid
+     
+
+    items-->
+	grid-column:1 /span 3      // start 1 span 3 grid 
+	grid-column: 2/4 	   // start 2 column ,end 4 column
+	grid-row: 2 / span 2	// start row 2, span 2 rows 
+	grid-row: 2/3		// start row 2,end 3 row
+        
+	grid-area: row-start/column-start/row-end/column-end;    // grid position define
+	 justify-content: center;   // horizontal center
+	align-items: center;        // vertical center
+     

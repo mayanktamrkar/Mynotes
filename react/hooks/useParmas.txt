@@ -1,0 +1,28 @@
+user.map((val,i))=>{
+<Link to=`/component/${user.id}` >click</Link>                    /// using link anywhere
+}
+
+------------------------------------------------------------------
+import * as React from 'react';
+import { Routes, Route, useParams } from 'react-router-dom';
+
+function ProfilePage() {
+  // Get the userId param from the URL.
+  let { userId } = useParams();
+ 
+  //post method send userId in params{userId:userId}
+  //recieve in backend in params values
+  //send response data
+  // display in this component
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="users">
+        <Route path="/component/:userId" element={<ProfilePage />} />      ///create root in app
+        <Route path="me" element={...} />
+      </Route>
+    </Routes>
+  );
+}

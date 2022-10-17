@@ -1,0 +1,36 @@
+let str = mayanktamrkar
+
+slice-------> str.slice(2,5)------->yan
+              str.slice(5)------->tamrkar
+	      str.slice(-2)------>kar
+
+substring --->same as slice but it not take negative values , if you give neg then it start from zero
+	     str.substring(-5)---->mayanktamrkar
+	     str.substring(2,5)-->yan
+
+substr------->same as slice but second argument is length 
+	     str.substring(2,3)-->yan
+
+
+count the object key -------------->var size = Object.keys(myObj).length;
+count the object values and key --> var size = Object.entries(myObj).length;
+
+-----------------------------------------------------------------------
+convertion -->
+
+convert object in array -----------> var size = Object.entries(myObj);
+
+
+array to object ------->	let str=[ "Ford", "BMW", "Audi", "Fiat" ]
+				const obj = Object.assign({}, str)
+                                result --->{ '0': 'Ford', '1': 'BMW', '2': 'Audi', '3': 'Fiat' }
+   				
+				-----------------------
+				const names = ['Alex', 'Bob', 'Johny', 'Atta']
+				const obj = { ...names }
+				// { '0': 'Alex', '1': 'Bob', '2': 'Johny', '3': 'Atta' }
+-------------------------------------------------------------------------------------
+
+				
+
+      
