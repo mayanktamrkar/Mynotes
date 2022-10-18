@@ -1,3 +1,5 @@
+string methods 
+
 let str = mayanktamrkar
 
 slice-------> str.slice(2,5)------->yan
@@ -10,15 +12,16 @@ substring --->same as slice but it not take negative values , if you give neg th
 
 substr------->same as slice but second argument is length 
 	     str.substring(2,3)-->yan
+-----------------------------------------------------------------
 
 
 count the object key -------------->var size = Object.keys(myObj).length;
 count the object values and key --> var size = Object.entries(myObj).length;
 
 -----------------------------------------------------------------------
-convertion -->
+type convertion -->
 
-convert object in array -----------> var size = Object.entries(myObj);
+convert object to array -----------> var size = Object.entries(myObj);    // use also use .values  or .keys 
 
 
 array to object ------->	let str=[ "Ford", "BMW", "Audi", "Fiat" ]
@@ -29,7 +32,114 @@ array to object ------->	let str=[ "Ford", "BMW", "Audi", "Fiat" ]
 				const names = ['Alex', 'Bob', 'Johny', 'Atta']
 				const obj = { ...names }
 				// { '0': 'Alex', '1': 'Bob', '2': 'Johny', '3': 'Atta' }
+
+array to string--- 
+			let m=[1,2,3,4,5]
+			let x =m.toString() // values in string 
 -------------------------------------------------------------------------------------
+array methods --
+
+push---->it add element in      last 
+pop-----> it remove element in    last 
+
+shift --- > it remove element in first 
+			let a=[1,2,3,4,5,6]
+			let b=a.shift()   // b=1
+
+unshift --->it add element in first 
+			let a=[1,2,3,4,5,6]
+			a.unshift(3)    // add 3 in first 
+
+splice---> we add element whenever we want 
+
+			fist paramater is position of element
+			second parameter is how many item remove
+			other is value
+
+			let a=[1,2,3,4,5,6]
+			a.splice(2,0,9)     // 2 position,0 removes ,9 values 
+			console.log(a)     // [1,2,9,3,4,5,6]
+
+delete using splice --->we delete values whenever we want  
+						a.splice(2,1)     // sencond postion ,one element
+						 console.log(a)
+
+			  
+
+map ---- return new arrray ,but foreach not return
+		let m=[5,6,4,8,5,2,2,2]
+
+
+			function may(v,i){
+				return v*2
+			}
+			let x=m.map(may)
+			console.log(x) // x--> [10,12,8,16,10,4,4,4]
+			console.log(m.map(may)) -->[10,12,8,16,10,4,4,4]
+
+filter----> return new array those values pass the test 
+		function may(v,i){
+		return v>5
+						}
+
+		let x =m.filter(may)// x=[6,8]
+
+reduce --> return single values ,(total,value,index,array)
+        let m=[1,2,3,4,5]
+		function may(v,i){
+			return v+i
+			
+
+		}
+
+		let x =m.reduce(may) //-->15
+
+
+every----> return boolean values ,check all true
+some----> return boolean values ,check one element is true
+find --->return first value ,who passes test ,and filter return all values 
+		function may(v,i){
+			return v>2
+		}
+
+		let x =m.find(may)//  x=4
+
+findIndex--->return first value index ,who pass the test 
+			function may(v,i){
+					return v>2
+			}
+
+			let x =m.findIndex(may)//  x=3
+
+
+sort()---sorted array elemenets in alphabetically order 
+
+			let a=[11,12,13,14,15,16]
+			a.sort(function(a,b){return a-b})           //assending
+
+
+			let a=[11,12,13,14,15,16]
+			a.sort(function(a,b){return b-a})           //desending 
+--------------------------------------------------------------------------------------------
+some method are similar in array and string both
+
+includes--->return true then values exist , it work array or string both
+			let m=[1,2,3,4,5]
+			let x =m.includes(0);    // x=false
+
+			let m="strmajan"
+			let x =m.includes("s");  // x=true
+indexOf----> return index of values , if not then give -1 , if work both array and string 
+
+slice -----> exact string and array both .
+			let m=[1,2,3,4,5]
+			let x =m.slice(0,2);
+			console.log(x)  //     x=[1,2]
+
+			let m="strmajan"
+			let x =m.slice(0,2);   // x="st"
+
+
 
 				
 
