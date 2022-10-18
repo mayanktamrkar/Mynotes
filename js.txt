@@ -140,6 +140,67 @@ slice -----> exact string and array both .
 			let x =m.slice(0,2);   // x="st"
 
 
+---------------------------------------------------------------------------------
+promises example --------------->
+
+
+				var promise = new Promise(function(resolve, reject) {
+				const x = "geeksforgeeeks";
+				const y = "geeksforgeeks"
+				if(x === y) {
+					resolve();
+				} else {
+					reject();
+				}
+				});
+
+				promise.then(()=>{
+					console.log("ddd")
+					
+				}).catch(()=>{
+					console.log("ss")
+				})
+----------
+promise waiting function
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+function asyncCall() {
+resolveAfter2Seconds().then((d)=>{
+	  console.log(d)
+ })
+  console.log('calling');
+}
+
+asyncCall();
+--------------------
+async await 
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
+---------------------------------------------------------------
+
+
 
 				
 

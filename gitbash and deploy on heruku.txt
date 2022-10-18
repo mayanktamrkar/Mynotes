@@ -43,3 +43,6 @@ git add .
 git commit -m "changes in file  "
 git push <url of repo>
 now you go github and merge file 
+
+git clone <repo add>  // pull data from repo
+after same process for push code
