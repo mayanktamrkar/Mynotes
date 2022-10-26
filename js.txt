@@ -19,25 +19,29 @@ count the object key -------------->var size = Object.keys(myObj).length;
 count the object values and key --> var size = Object.entries(myObj).length;
 
 -----------------------------------------------------------------------
-type convertion -->
+Type convertion -->
 
 convert object to array -----------> var size = Object.entries(myObj);    // use also use .values  or .keys 
+convert object to string ----------> JSON.stringify(obj)
 
 
-array to object ------->	let str=[ "Ford", "BMW", "Audi", "Fiat" ]
-				const obj = Object.assign({}, str)
-                                result --->{ '0': 'Ford', '1': 'BMW', '2': 'Audi', '3': 'Fiat' }
+array to object ------->	let arr=[ "Ford", "BMW", "Audi", "Fiat" ]
+				const obj = Object.assign({}, arr)       // result --->{ '0': 'Ford', '1': 'BMW', '2': 'Audi', '3': 'Fiat' }
    				
-				-----------------------
-				const names = ['Alex', 'Bob', 'Johny', 'Atta']
-				const obj = { ...names }
+				const obj = { ...array }
 				// { '0': 'Alex', '1': 'Bob', '2': 'Johny', '3': 'Atta' }
 
 array to string--- 
 			let m=[1,2,3,4,5]
 			let x =m.toString() // values in string 
+
+string to object ------> JSON.parse(str)
+string to array------->array.push(str)
+					   Array.from(str)
+					   str.split("")
+
 -------------------------------------------------------------------------------------
-array methods --
+Array methods --
 
 push---->it add element in      last 
 pop-----> it remove element in    last 
@@ -160,7 +164,7 @@ promises example --------------->
 				}).catch(()=>{
 					console.log("ss")
 				})
-----------
+--------------------------------------
 promise waiting function
 
 function resolveAfter2Seconds() {
@@ -198,7 +202,52 @@ async function asyncCall() {
 }
 
 asyncCall();
----------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+variables 
+
+                     var           let
+scope				gloabl        block 
+function scope 		yes            yes            we not acces outside of function
+loop ,if ,switch    outside        not outside
+redeclared           yes            not             var x=5     let y=5
+shadow               yes            not				var x=6     let y=6 //not allowed
+
+
+block scope means we combinded the js code in single statement
+
+var a =5    	         		       let x =5
+var a=6  //allowed 				       let x=6 // not allowed
+
+var x=5                                 let x=5
+{ 
+	let x=6  //allowed                 {  var x=6 // not allowed} 
+}
+
+-------------------------------------------------------------------------------------------------------------
+first class function-->
+
+closure -->function inside function , function return function with lexical environment 
+           so we acces variables outside function with closure 
+			    
+			function  a()
+			{
+						let x=5   // x is function scope 
+						return function d(){
+		
+							return 5
+						}
+	
+
+			}		
+			
+
+		var y=a()
+		var z=y()   ///  we access x=5 outside function 
+		console.log(z)
+------------
+
+
+ 
 
 
 
