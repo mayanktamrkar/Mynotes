@@ -198,8 +198,15 @@ async function asyncCall() {
 }
 
 asyncCall();
----------------------------------------------------------------
+-------------------------------------------------------------------------
+                    var                     let  
+redacleared         yes						not
+scope				global					block
+function scope		yes 					yes                           we not acces variable outside funtion ,
+if else 			global					local 
+for loop 			global 					local
 
+------------------------------------------------------------------------------
 
 
 				
