@@ -2,3 +2,12 @@
 2 preventDefault()-->for stop reloading page
 3. disabled --> for tag enable and disable
 
+display--------------------------------------->
+none ---hide content
+block-- convert inline element to block element
+inline--line    and   convert block element to inline element
+--------------------------------------------
+float--->using for position 
+float:left: ---elements are start left     ( and inline )
+float:right: ---elements are start right   and inline
+
