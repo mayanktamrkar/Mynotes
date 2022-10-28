@@ -15,7 +15,9 @@ basic insertion commands
 -----------------------------------------------------------
 git log    //cheking commits
 git log --oneline    /// line comments
-git reset HEAD~       // reverse or remove commits 
+git reset HEAD~       // reverse back only previus commits 
+git reset <hexvalue>   // we back to over previus commits any 
+git remote -v        //checking  remote availble or/not
 
 
 ------------------------------------------------------------------------------------------------------
