@@ -1,7 +1,7 @@
 1 reload() --> for raload the page 
 2 preventDefault()-->for stop reloading page
 3. disabled --> for tag enable and disable
-4 <meta http-equiv="refresh" content="30">  /// refreshing page every 30second
+4 <meta http-equiv="refresh" content="30">  /// refreshing page every 30second ok 
 5 
 
 
