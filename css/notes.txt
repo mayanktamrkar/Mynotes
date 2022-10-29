@@ -53,4 +53,34 @@ inline-block;      ///same as inline , but we give height and width
 float--->using for position 
 float:left: ---elements are start left     ( and inline )
 float:right: ---elements are start right   and inline
+-------------------------------------------->
+css selector -
+tag selecotr -> p{},div{}
+class--> .container
+id--> #demo
+indside tag-> div p{}
+indside class -> div.container{}
+                 div>p{}    //all  p who have parent div
+		 div+p{}    //select first immidatep, after div
+		 div~p{}    //select every p ,after div 
+		 [title~=flower]   //select those img that titile have flower
+		 div[class*="test"]   //select all div ,who have class test
+		 a[href^="https"]    //start
+		 a[href$="https"]   //end 
+		 p:first-child     // [last-child ,first-line,first-letter]select first p , any parent 
+		 input:enabled    //enabled,disabled,focus,checked,default
+		 a:hover         //active,link
+		 p:nth-child(2)  // select second p in parent
+		 p:nth-last-child(2) //
+		 p:only-of-type {}   //every p ,that parent have only one p
+-----------------------------------------------------------------------------
+some function -->
+	  width: calc(100% - 200px);   // perform calculation 
+	  width: max(50%, 300px);   //min also
+	  var() ,rgb(),
+	  background: linear-gradient(white, yellow,white);  // mixing color
+	  
+
+		 
+		 
      
