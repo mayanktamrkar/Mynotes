@@ -244,4 +244,4 @@ closure -->function inside function , function return function with lexical envi
 		var y=a()
 		var z=y()   ///  we access x=5 outside function 
 		console.log(z)
-------------
+-----------------------------------------------------------
