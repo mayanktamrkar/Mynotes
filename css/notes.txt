@@ -19,4 +19,10 @@ grid --->
 	grid-area: row-start/column-start/row-end/column-end;    // grid position define
 	 justify-content: center;   // horizontal center
 	align-items: center;        // vertical center
+
+
+	---------------------------------------------------------------------------
+postion -->
+ fixed- fixed in window 
+ sticky -> move and depent on parent div , finally fixed in top 	
      
