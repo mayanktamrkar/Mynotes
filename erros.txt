@@ -3,3 +3,4 @@
 3    No default engine was specified and no extension was provided.----->provide ejs engine
 4   body-parser deprecated undefined extended: provide extended option ------> app.use(express.urlencoded({extended:false}))
 5   you post data from form and data undefined then used urlencoded or json ..
+Cannot use import statement outside a module  ---> install package.json and type module
