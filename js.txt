@@ -249,7 +249,15 @@ closure -->function inside function , function return function with lexical envi
 arrow function -> in simple funtion we call before define . but arrow funtion call after defination .
                  beacuse it save as a variable not a funtion .
 -------------------------------------------------------------------------------------
+import and export ---->
 
+default export --> in this we export only one , and import to any name.
+		export default obj;
+		import object from './filename.js'
+		
+name export --> in name export , you import same name	
+		export { obj };
+		import { obj } from './filename.js'
 
  
 
