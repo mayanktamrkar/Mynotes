@@ -244,7 +244,11 @@ closure -->function inside function , function return function with lexical envi
 		var y=a()
 		var z=y()   ///  we access x=5 outside function 
 		console.log(z)
-------------
+
+
+arrow function -> in simple funtion we call before define . but arrow funtion call after defination .
+                 beacuse it save as a variable not a funtion .
+-------------------------------------------------------------------------------------
 
 
  
