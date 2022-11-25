@@ -67,9 +67,10 @@ child1 -->
 parent or app -->
 
        import items from './child1'
+       import citydata from './citydata'
        
        return (
-       <items.Provider value={items._currentValue} >   
+       <items.Provider value={[items._currentValue,citydata._currentValue]} >    /// multiple value in arrays
        
        // access children 
        </tems.Provider>
@@ -78,8 +79,8 @@ child -->
 
         import items from './child1'
         const data=useContext(items)
-        console.log(data.name)    ///  mayank 
-        data.age()       //call funcion
+        console.log(data[0].name)    ///  mayank 
+        data[0].age()       //call function
 
  
 
