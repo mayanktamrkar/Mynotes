@@ -53,3 +53,43 @@ export const Test = () => {
 }
 
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+child1 to parent and parent to all child 
+
+
+child1 -->
+        
+        const items= React.createContext({name:"mayank",age:()=>{ console.log("header")}})    //data pass in items
+        export default items ;                                         //export itmes 
+        
+        
+parent or app -->
+
+       import items from './child1'
+       
+       return (
+       <items.Provider value={items._currentValue} >   
+       
+       // access children 
+       </tems.Provider>
+       )
+child -->
+
+        import items from './child1'
+        const data=useContext(items)
+        console.log(data.name)    ///  mayank 
+        data.age()       //call funcion
+
+ 
+
+      
+       
+       
+       
+        
+        
+
+
+
+
